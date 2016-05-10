@@ -1,0 +1,10 @@
+message Command {
+
+  enum CommandType {
+    START_TEST = 0;
+    RESULTS = 1;
+  }
+
+  required CommandType type = 1;
+  optional string data = 2;
+}
