@@ -6,5 +6,7 @@ message Command {
   }
 
   required CommandType type = 1;
-  optional string data = 2;
+  required string name = 2;
+
+  optional string data = 3;
 }
