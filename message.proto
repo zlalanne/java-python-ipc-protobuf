@@ -1,8 +1,11 @@
+option java_package = "com.zlalanne";
+
 message Command {
 
   enum CommandType {
     START_TEST = 0;
     RESULTS = 1;
+    SHUTDOWN = 2;
   }
 
   required CommandType type = 1;
@@ -10,3 +13,4 @@ message Command {
 
   optional string data = 3;
 }
+

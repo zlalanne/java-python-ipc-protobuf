@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
-  serialized_pb=_b('\n\rmessage.proto\"u\n\x07\x43ommand\x12\"\n\x04type\x18\x01 \x02(\x0e\x32\x14.Command.CommandType\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\"*\n\x0b\x43ommandType\x12\x0e\n\nSTART_TEST\x10\x00\x12\x0b\n\x07RESULTS\x10\x01')
+  serialized_pb=_b('\n\rmessage.proto\"\x83\x01\n\x07\x43ommand\x12\"\n\x04type\x18\x01 \x02(\x0e\x32\x14.Command.CommandType\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\"8\n\x0b\x43ommandType\x12\x0e\n\nSTART_TEST\x10\x00\x12\x0b\n\x07RESULTS\x10\x01\x12\x0c\n\x08SHUTDOWN\x10\x02\x42\x0e\n\x0c\x63om.zlalanne')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -38,11 +38,15 @@ _COMMAND_COMMANDTYPE = _descriptor.EnumDescriptor(
       name='RESULTS', index=1, number=1,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SHUTDOWN', index=2, number=2,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=92,
-  serialized_end=134,
+  serialized_start=93,
+  serialized_end=149,
 )
 _sym_db.RegisterEnumDescriptor(_COMMAND_COMMANDTYPE)
 
@@ -87,8 +91,8 @@ _COMMAND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17,
-  serialized_end=134,
+  serialized_start=18,
+  serialized_end=149,
 )
 
 _COMMAND.fields_by_name['type'].enum_type = _COMMAND_COMMANDTYPE
@@ -103,4 +107,6 @@ Command = _reflection.GeneratedProtocolMessageType('Command', (_message.Message,
 _sym_db.RegisterMessage(Command)
 
 
+DESCRIPTOR.has_options = True
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\014com.zlalanne'))
 # @@protoc_insertion_point(module_scope)

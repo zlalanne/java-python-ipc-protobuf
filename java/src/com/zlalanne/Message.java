@@ -19,7 +19,7 @@ public final class Message {
     /**
      * <code>required .Command.CommandType type = 1;</code>
      */
-    Message.Command.CommandType getType();
+    com.zlalanne.Message.Command.CommandType getType();
 
     /**
      * <code>required string name = 2;</code>
@@ -103,7 +103,7 @@ public final class Message {
             }
             case 8: {
               int rawValue = input.readEnum();
-              Message.Command.CommandType value = Message.Command.CommandType.valueOf(rawValue);
+              com.zlalanne.Message.Command.CommandType value = com.zlalanne.Message.Command.CommandType.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
@@ -138,14 +138,14 @@ public final class Message {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Message.internal_static_Command_descriptor;
+      return com.zlalanne.Message.internal_static_Command_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Message.internal_static_Command_fieldAccessorTable
+      return com.zlalanne.Message.internal_static_Command_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Message.Command.class, Message.Command.Builder.class);
+              com.zlalanne.Message.Command.class, com.zlalanne.Message.Command.Builder.class);
     }
 
     public static com.google.protobuf.Parser<Command> PARSER =
@@ -176,6 +176,10 @@ public final class Message {
        * <code>RESULTS = 1;</code>
        */
       RESULTS(1, 1),
+      /**
+       * <code>SHUTDOWN = 2;</code>
+       */
+      SHUTDOWN(2, 2),
       ;
 
       /**
@@ -186,6 +190,10 @@ public final class Message {
        * <code>RESULTS = 1;</code>
        */
       public static final int RESULTS_VALUE = 1;
+      /**
+       * <code>SHUTDOWN = 2;</code>
+       */
+      public static final int SHUTDOWN_VALUE = 2;
 
 
       public final int getNumber() { return value; }
@@ -194,6 +202,7 @@ public final class Message {
         switch (value) {
           case 0: return START_TEST;
           case 1: return RESULTS;
+          case 2: return SHUTDOWN;
           default: return null;
         }
       }
@@ -220,7 +229,7 @@ public final class Message {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return Message.Command.getDescriptor().getEnumTypes().get(0);
+        return com.zlalanne.Message.Command.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final CommandType[] VALUES = values();
@@ -247,7 +256,7 @@ public final class Message {
 
     private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
-    private Message.Command.CommandType type_;
+    private com.zlalanne.Message.Command.CommandType type_;
     /**
      * <code>required .Command.CommandType type = 1;</code>
      */
@@ -257,7 +266,7 @@ public final class Message {
     /**
      * <code>required .Command.CommandType type = 1;</code>
      */
-    public Message.Command.CommandType getType() {
+    public com.zlalanne.Message.Command.CommandType getType() {
       return type_;
     }
 
@@ -346,7 +355,7 @@ public final class Message {
     }
 
     private void initFields() {
-      type_ = Message.Command.CommandType.START_TEST;
+      type_ = com.zlalanne.Message.Command.CommandType.START_TEST;
       name_ = "";
       data_ = "";
     }
@@ -413,53 +422,53 @@ public final class Message {
       return super.writeReplace();
     }
 
-    public static Message.Command parseFrom(
+    public static com.zlalanne.Message.Command parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Message.Command parseFrom(
+    public static com.zlalanne.Message.Command parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Message.Command parseFrom(byte[] data)
+    public static com.zlalanne.Message.Command parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Message.Command parseFrom(
+    public static com.zlalanne.Message.Command parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Message.Command parseFrom(java.io.InputStream input)
+    public static com.zlalanne.Message.Command parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Message.Command parseFrom(
+    public static com.zlalanne.Message.Command parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static Message.Command parseDelimitedFrom(java.io.InputStream input)
+    public static com.zlalanne.Message.Command parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static Message.Command parseDelimitedFrom(
+    public static com.zlalanne.Message.Command parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static Message.Command parseFrom(
+    public static com.zlalanne.Message.Command parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static Message.Command parseFrom(
+    public static com.zlalanne.Message.Command parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -468,7 +477,7 @@ public final class Message {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(Message.Command prototype) {
+    public static Builder newBuilder(com.zlalanne.Message.Command prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -485,20 +494,20 @@ public final class Message {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Command)
-        Message.CommandOrBuilder {
+        com.zlalanne.Message.CommandOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Message.internal_static_Command_descriptor;
+        return com.zlalanne.Message.internal_static_Command_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Message.internal_static_Command_fieldAccessorTable
+        return com.zlalanne.Message.internal_static_Command_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Message.Command.class, Message.Command.Builder.class);
+                com.zlalanne.Message.Command.class, com.zlalanne.Message.Command.Builder.class);
       }
 
-      // Construct using Message.Command.newBuilder()
+      // Construct using com.zlalanne.Message.Command.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -518,7 +527,7 @@ public final class Message {
 
       public Builder clear() {
         super.clear();
-        type_ = Message.Command.CommandType.START_TEST;
+        type_ = com.zlalanne.Message.Command.CommandType.START_TEST;
         bitField0_ = (bitField0_ & ~0x00000001);
         name_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -533,23 +542,23 @@ public final class Message {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Message.internal_static_Command_descriptor;
+        return com.zlalanne.Message.internal_static_Command_descriptor;
       }
 
-      public Message.Command getDefaultInstanceForType() {
-        return Message.Command.getDefaultInstance();
+      public com.zlalanne.Message.Command getDefaultInstanceForType() {
+        return com.zlalanne.Message.Command.getDefaultInstance();
       }
 
-      public Message.Command build() {
-        Message.Command result = buildPartial();
+      public com.zlalanne.Message.Command build() {
+        com.zlalanne.Message.Command result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public Message.Command buildPartial() {
-        Message.Command result = new Message.Command(this);
+      public com.zlalanne.Message.Command buildPartial() {
+        com.zlalanne.Message.Command result = new com.zlalanne.Message.Command(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -570,16 +579,16 @@ public final class Message {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Message.Command) {
-          return mergeFrom((Message.Command)other);
+        if (other instanceof com.zlalanne.Message.Command) {
+          return mergeFrom((com.zlalanne.Message.Command)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Message.Command other) {
-        if (other == Message.Command.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.zlalanne.Message.Command other) {
+        if (other == com.zlalanne.Message.Command.getDefaultInstance()) return this;
         if (other.hasType()) {
           setType(other.getType());
         }
@@ -613,11 +622,11 @@ public final class Message {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Message.Command parsedMessage = null;
+        com.zlalanne.Message.Command parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Message.Command) e.getUnfinishedMessage();
+          parsedMessage = (com.zlalanne.Message.Command) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -628,7 +637,7 @@ public final class Message {
       }
       private int bitField0_;
 
-      private Message.Command.CommandType type_ = Message.Command.CommandType.START_TEST;
+      private com.zlalanne.Message.Command.CommandType type_ = com.zlalanne.Message.Command.CommandType.START_TEST;
       /**
        * <code>required .Command.CommandType type = 1;</code>
        */
@@ -638,13 +647,13 @@ public final class Message {
       /**
        * <code>required .Command.CommandType type = 1;</code>
        */
-      public Message.Command.CommandType getType() {
+      public com.zlalanne.Message.Command.CommandType getType() {
         return type_;
       }
       /**
        * <code>required .Command.CommandType type = 1;</code>
        */
-      public Builder setType(Message.Command.CommandType value) {
+      public Builder setType(com.zlalanne.Message.Command.CommandType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -658,7 +667,7 @@ public final class Message {
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        type_ = Message.Command.CommandType.START_TEST;
+        type_ = com.zlalanne.Message.Command.CommandType.START_TEST;
         onChanged();
         return this;
       }
@@ -840,10 +849,11 @@ public final class Message {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rmessage.proto\"u\n\007Command\022\"\n\004type\030\001 \002(\016" +
-      "2\024.Command.CommandType\022\014\n\004name\030\002 \002(\t\022\014\n\004" +
-      "data\030\003 \001(\t\"*\n\013CommandType\022\016\n\nSTART_TEST\020" +
-      "\000\022\013\n\007RESULTS\020\001"
+      "\n\rmessage.proto\"\203\001\n\007Command\022\"\n\004type\030\001 \002(" +
+      "\0162\024.Command.CommandType\022\014\n\004name\030\002 \002(\t\022\014\n" +
+      "\004data\030\003 \001(\t\"8\n\013CommandType\022\016\n\nSTART_TEST" +
+      "\020\000\022\013\n\007RESULTS\020\001\022\014\n\010SHUTDOWN\020\002B\016\n\014com.zla" +
+      "lanne"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
